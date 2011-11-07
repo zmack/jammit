@@ -241,7 +241,7 @@ module Jammit
 
     # Concatenate together a list of asset files.
     def concatenate(paths)
-      [paths].flatten.map {|p| read_binary_file(p) }.join("\n")
+      [paths].flatten.map {|p| read_binary_file(p) }.join(";\n")
     end
 
     # `File.read`, but in "binary" mode.
